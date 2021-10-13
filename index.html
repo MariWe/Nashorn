@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Navigation</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"> </script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>  
+    <script src="./script.js"></script>
+  </head> 
+  <body style='margin: 0; overflow: hidden;'>
+    
+    <a-scene 
+        id="szene"
+        vr-mode-ui='enabled: false' 
+        embedded
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        <div id="demo" style="position: fixed; left: 40%; top: 5%; font-size: 1.25em; color: rgb(53, 50, 50); font-family: fantasy; z-index: 999999; background-color: rgba(255, 255, 255, 0.3); border-radius:5px;"></div>
+
+      <!--1. Wegpunkt-->
+      <a-entity geometry="primitive: sphere; radius: 2"
+      gps-entity-place="latitude: 50.82221085692757; longitude: 12.939699143171312;"
+      scale="0.1 0.1 0.1"
+      id="one" data-lat="50.82221085692757" data-lon="12.939699143171312" data-next="two"></a-entity>
+
+      <!--2. Wegpunkt-->
+      <a-entity geometry="primitive: sphere; radius: 2"
+      gps-entity-place="latitude: 50.82260989320617; longitude: 12.938729524612429;"
+      scale="0.1 0.1 0.1"
+      id="two" data-lat="50.82260989320617" data-lon="12.938729524612429" data-next="three"></a-entity>
+
+      <!--3. Wegpunkt-->
+      <a-entity geometry="primitive: sphere; radius: 2"
+      gps-entity-place="latitude: 50.8230699244291; longitude: 12.937635183334352;"
+      scale="0.1 0.1 0.1"
+      id="three" data-lat="50.8230699244291" data-lon="12.937635183334352" data-next="four"></a-entity>
+      
+          <!--Pony-->
+      <a-entity geometry="primitive: sphere; radius: 2"
+      gps-entity-place="latitude: 50.823901866253735; longitude: 12.937468886375429;"
+      scale="0.2 0.2 .2"
+      id="four" data-lat="50.823901866253735" data-lon="12.937468886375429" data-next="null"></a-entity> 
+
+      <!--Camera + Arrow-->
+      <a-camera gps-camera=" minDistance: 1; maxDistance: 50;  gpsMinDistance: 5; gpsTimeInterval: 3;" rotation-reader>
+        <a-gltf-model id="pfeil"
+        src="https://raw.githubusercontent.com/MariWe/ArSkulpturen/main/assets/Unbenannt.glb"
+        scale="1 1 1"
+        position="0 0 -4 ">
+        </a-gltf-model>
+      </a-camera> 
+</a-scene>
+</html> 
