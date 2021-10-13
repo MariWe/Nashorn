@@ -16,29 +16,53 @@
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         <div id="demo" style="position: fixed; left: 40%; top: 5%; font-size: 1.25em; color: rgb(53, 50, 50); font-family: fantasy; z-index: 999999; background-color: rgba(255, 255, 255, 0.3); border-radius:5px;"></div>
 
-      <!--1. Wegpunkt-->
+     	  <!--1. Wegpunkt-->
       <a-entity geometry="primitive: sphere; radius: 2"
-      gps-entity-place="latitude: 50.82221085692757; longitude: 12.939699143171312;"
+      gps-entity-place="latitude: 50.79607772709091; longitude: 12.917568007511115;"
       scale="0.1 0.1 0.1"
-      id="one" data-lat="50.82221085692757" data-lon="12.939699143171312" data-next="two"></a-entity>
-
-      <!--2. Wegpunkt-->
+      id="one" data-lat="50.79607772709091" data-lon="12.917568007511115" data-next="two"></a-entity>
+	  
+	  <!--2. Wegpunkt-->
       <a-entity geometry="primitive: sphere; radius: 2"
-      gps-entity-place="latitude: 50.82260989320617; longitude: 12.938729524612429;"
+      gps-entity-place="latitude: 50.79628397927623; longitude: 12.917645371212794;"
       scale="0.1 0.1 0.1"
-      id="two" data-lat="50.82260989320617" data-lon="12.938729524612429" data-next="three"></a-entity>
-
-      <!--3. Wegpunkt-->
+      id="two" data-lat="50.79628397927623" data-lon="12.917645371212794" data-next="three"></a-entity>
+	  
+	  <!--3. Wegpunkt-->
       <a-entity geometry="primitive: sphere; radius: 2"
-      gps-entity-place="latitude: 50.8230699244291; longitude: 12.937635183334352;"
+      gps-entity-place="latitude: 50.79638680863438; longitude: 12.917511880427947;"
       scale="0.1 0.1 0.1"
-      id="three" data-lat="50.8230699244291" data-lon="12.937635183334352" data-next="four"></a-entity>
-      
-          <!--Pony-->
+      id="three" data-lat="50.79638680863438" data-lon="12.917511880427947" data-next="four"></a-entity>
+	  
+	  <!--4. Wegpunkt-->
       <a-entity geometry="primitive: sphere; radius: 2"
-      gps-entity-place="latitude: 50.823901866253735; longitude: 12.937468886375429;"
-      scale="0.2 0.2 .2"
-      id="four" data-lat="50.823901866253735" data-lon="12.937468886375429" data-next="null"></a-entity> 
+      gps-entity-place="latitude: 50.796635588833496; longitude: 12.917854059317621;"
+      scale="0.1 0.1 0.1"
+      id="four" data-lat="50.796635588833496" data-lon="12.917854059317621" data-next="five"></a-entity>
+	  
+	  <!--5. Wegpunkt-->
+      <a-entity geometry="primitive: sphere; radius: 2"
+      gps-entity-place="latitude: 50.796249309466496; longitude: 12.91861304574076;"
+      scale="0.1 0.1 0.1"
+      id="five" data-lat="50.796249309466496" data-lon="12.91861304574076" data-next="six"></a-entity>
+	  
+	  <!--6. Wegpunkt-->
+      <a-entity geometry="primitive: sphere; radius: 2"
+      gps-entity-place="latitude: 50.79662143797465; longitude: 12.91920347641774;"
+      scale="0.1 0.1 0.1"
+      id="six" data-lat="50.79662143797465" data-lon="12.91920347641774" data-next="seven"></a-entity>
+	  
+	  <!--7. Wegpunkt-->
+      <a-entity geometry="primitive: sphere; radius: 2"
+      gps-entity-place="latitude: 50.79655852234217; longitude: 12.939699143171312;"
+      scale="0.1 0.1 0.1"
+      id="seven" data-lat="50.79655852234217" data-lon="12.939699143171312" data-next="eight"></a-entity>
+	  
+	  <!--Ziel-->
+      <a-entity geometry="primitive: sphere; radius: 2"
+      gps-entity-place="latitude: 50.79655852234217; longitude: 12.919306689218379;"
+      scale="0.1 0.1 0.1"
+      id="eight" data-lat="50.79655852234217" data-lon="12.919306689218379" data-next="null"></a-entity>
 
       <!--Camera + Arrow-->
       <a-camera gps-camera=" minDistance: 1; maxDistance: 50;  gpsMinDistance: 5; gpsTimeInterval: 3;" rotation-reader>
