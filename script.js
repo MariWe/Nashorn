@@ -1,15 +1,14 @@
 let model, next, lat1, lat2, lon1, lon2, one, obj, d, lat, lon;
 
 window.onload = () => {
-
-    one = document.getElementById('one');
-    getLocation();
-    createButton();
     
     let dest = document.getElementById('seven').getAttribute('gps-entity-place');
     let zielLat = dest.latitude;
     let zielLon = dest.longitude;
-
+    
+    one = document.getElementById('one');
+    getLocation();
+    
     //"Navigation"
     function Navigation() {
         next = document.getElementById(one.dataset.next);
