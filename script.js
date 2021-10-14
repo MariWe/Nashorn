@@ -68,44 +68,6 @@ window.onload = () => {
         pfeil.object3D.lookAt(new THREE.Vector3(position.x, position.y, position.z));
     }
 
-    //Button zum Erzeugen des Objektes + Vergabe der Style-Elemente 
-    function createButton(){
-        let btn = document.createElement("button");
-        btn.innerHTML = "Click Me!";
-        document.body.appendChild(btn);
-        btn.setAttribute('id', 'btn');
-        btn.style.color = "rgb(53, 50, 50)";
-        btn.style.position = "fixed";
-        btn.style.zIndex = "999999";
-        btn.style.left = "40%";
-        btn.style.bottom = "5%";
-        btn.style.fontSize = "1.25em";
-        btn.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-        btn.style.fontFamily = "fantasy";
-        btn.style.borderRadius = "5px";
-    
-        btn.onclick = function () {
-            createElement();
-            setTimeout(function () {
-                update();
-            }, 100);
-        };
-        }
-
-    function createElement() {
-        model = document.createElement('a-box');
-        document.querySelector('a-scene').appendChild(model);
-        model.setAttribute('material', 'color: maroon; roughness: 1.0; metalness: 0.5;');
-        model.setAttribute('id', 'box');
-        model.setAttribute('scale', '0.5 0.5 0.5');
-        model.setAttribute('gps-entity-place', 'latitude: ${lat1}; longitude: ${lon1};');
-        model.setAttribute('position', '1 1 -5');
-    }
-
-    function update() {
-        model.setAttribute('position', { x: 1, y: 1, z: -5 });
-    }
-
     //distanzBerechnung
     //cr: "https://www.movable-type.co.uk/scripts/latlong.html"
     function Distanz(lat1, lon1, lat2, lon2) {
